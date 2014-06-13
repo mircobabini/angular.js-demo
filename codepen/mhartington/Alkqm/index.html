@@ -1,0 +1,73 @@
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+    <title>Tabs Example</title>
+
+    <link href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive"></ion-nav-bar>
+             
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+
+    <script id="main.html" type="text/ng-template">
+     <ion-view title="Page One">
+       <ion-nav-buttons side="right">
+         <a ui-sref="second" class="button button-clear">
+           Page Two
+         </a>
+       </ion-nav-buttons>
+       
+        <ion-content>
+        <h1>Hello</h1>
+          <h3>Page One</h3>
+      </ion-content>
+     </ion-view>
+    </script>
+
+    
+    
+    <script id="second.html" type="text/ng-template">
+     <ion-view title="Page Two">
+        <ion-nav-buttons side="left">
+         <a ui-sref="main" class="button button-clear">
+           Page One
+         </a>
+       </ion-nav-buttons>
+       <ion-nav-buttons side="right">
+         <a ui-sref="third" class="button button-clear">
+           Page Three
+         </a>
+       </ion-nav-buttons>
+       
+        <ion-content>
+        <h1>Hello</h1>
+          <h3>Page Two</h3>
+      </ion-content>
+     </ion-view>
+    </script>
+    
+    
+    <script id="third.html" type="text/ng-template">
+     <ion-view title="Page Three">
+       <ion-nav-buttons side="left">
+         <a ui-sref="second" class="button button-clear">
+           Page Two
+         </a>
+       </ion-nav-buttons>
+       
+        <ion-content>
+        <h1>Hello</h1>
+           <h3>Page Three</h3>
+      </ion-content>
+     </ion-view>
+    </script>
+  </body>
+</html>
